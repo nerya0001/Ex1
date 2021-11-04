@@ -1,6 +1,5 @@
-from src import building_class
 import unittest
-
+from classes import building_class
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):

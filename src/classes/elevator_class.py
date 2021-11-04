@@ -9,3 +9,13 @@ class Elevator(object):
         self.open_time = open_time
         self.start_time = start_time
         self.stop_time = stop_time
+
+    def __str__(self):
+        return f"id: {self.id}, speed: {self.speed}, min floor: {self.min_floor}, max floor: {self.max_floor}, close " \
+               f"time: {self.close_time}, open time: {self.open_time}, start time: {self.start_time}, stop" \
+               f" time: {self.stop_time} "
+
+
+if __name__ == '__main__':
+    e = Elevator(2, 2.0, 0, 10, 0.2, 0.3, 0.1, 0.4)
+    print(e)

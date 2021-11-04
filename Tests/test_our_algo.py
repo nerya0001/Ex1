@@ -1,5 +1,5 @@
 import unittest
-from classes import elevator_class
+from src import our_algo
 
 
 class MyTestCase(unittest.TestCase):
