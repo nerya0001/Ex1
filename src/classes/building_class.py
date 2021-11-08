@@ -1,5 +1,6 @@
 import json
 
+
 class Building(object):
     def __init__(self, min_floor: int = None, max_floor: int = None, elevators: list = None):
         self.min_floor = min_floor
