@@ -15,6 +15,16 @@ class Elevator(object):
                f"time: {self.close_time}, open time: {self.open_time}, start time: {self.start_time}, stop" \
                f" time: {self.stop_time} "
 
+    def init_from_list(elev_list: list = None):
+        new_list = []
+        for i in elev_list:
+            curr_elev = Elevator(id=i["_id"], speed=i["_speed"], min_floor=i["_minFloor"],
+                                 max_floor=i["_maxFloor"], close_time=i["_closeTime"],
+                                 open_time=i["_openTime"], start_time=i["_startTime"],
+                                 stop_time=i["_stopTime"])
+            new_list.append(curr_elev)
+        return new_list
+
 
 if __name__ == '__main__':
     e = Elevator(2, 2.0, 0, 10, 0.2, 0.3, 0.1, 0.4)

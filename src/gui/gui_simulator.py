@@ -2,10 +2,8 @@ from tkinter import *
 
 class Elevator_label(Label):
 
-    def __init__(self, sim_window:Simulator_Window = none):
+    def __init__(self, sim_window:Simulator_Window = None):
         super(Elevator_label, self).__init__(window=sim_window)
-
-
 
 class Simulator_Window(Tk):
 
