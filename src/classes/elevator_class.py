@@ -10,6 +10,7 @@ class Elevator(object):
         self.start_time = start_time
         self.stop_time = stop_time
 
+
     def __str__(self):
         return f"id: {self.id}, speed: {self.speed}, min floor: {self.min_floor}, max floor: {self.max_floor}, close " \
                f"time: {self.close_time}, open time: {self.open_time}, start time: {self.start_time}, stop" \
