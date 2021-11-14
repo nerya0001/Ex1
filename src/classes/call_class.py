@@ -25,7 +25,7 @@ class Call:
         call = []
         for i in calls:
             call.append(i.__dict__.values())
-        with open('../../input_data/out/out.csv', "w", newline="") as ans:
+        with open('../../out/out.csv', "w", newline="") as ans:
             writer = csv.writer(ans)
             writer.writerows(call)
 
@@ -34,12 +34,11 @@ class Call:
 
 
 if __name__ == '__main__':
-    calls = Call.init_from_file("../../input_data/csv_calls/Calls_a.csv")
+    calls = Call.init_from_file("../../input_data/csv_calls/Calls_d.csv")
     b = Building()
     b.init_from_file("../../input_data/json_buildings/b5.json")
-    print(len(b.elevators))
     for i in calls:
-        i.elev_allocate = random.randrange(0, len(b.elevators), 1)
+        i.elev_allocate = random.randrange(0, b.number_of_elevators(), 1)
     Call.write_to(calls)
 #     for i in calls:
 #         print(f"{i}\n")
