@@ -4,7 +4,7 @@ class TimerError(Exception):
     """A custom exception used to report errors in use of Timer class"""
 
 class Timer:
-    def __init__(self, dt:int = 0.01):
+    def __init__(self, dt:int = 10):
         """
         :param dt: A scale of one second in our count
         """
@@ -35,3 +35,12 @@ class Timer:
         elapsed_time = (time.perf_counter() - self._start_time) * self.dt
         self._start_time = None
         print(f"Elapsed time: {elapsed_time:0.4f} seconds")
+
+
+if __name__ == '__main__':
+    t = Timer()
+    t.start()
+    time.sleep(1)
+    print(t.get_time())
+    time.sleep(2)
+    print(t.get_time())

@@ -21,11 +21,11 @@ class Call:
                 calls_list.append(curr_call)
         return calls_list
 
-    def write_to(calls):
+    def write_to(calls, file_name):
         call = []
         for i in calls:
             call.append(i.__dict__.values())
-        with open('../../out/out.csv', "w", newline="") as ans:
+        with open(f'../../out/{file_name}', "w", newline="") as ans:
             writer = csv.writer(ans)
             writer.writerows(call)
 

@@ -27,6 +27,7 @@ class Elevator(object):
         return new_list
 
 
+
 if __name__ == '__main__':
     e = Elevator(2, 2.0, 0, 10, 0.2, 0.3, 0.1, 0.4)
     print(e)
