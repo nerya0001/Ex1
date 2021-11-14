@@ -62,11 +62,7 @@ class Our_algo:
                     best_time = curr_time
                     allo_elev = i
 
-
-
-
-
-        return allo_elev
+        call.elev_allocate = allo_elev
 
     def update(self):
         pass
