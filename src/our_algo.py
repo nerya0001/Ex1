@@ -15,7 +15,7 @@ class Q_Node:
 
     def __init__(self, floor: int, elev: Elevator, elev_pos: int):
         self.floor = floor
-        arrival_time = Our_algo.time_to_end(floor, elev, elev_pos)
+        self.arrival_time = Our_algo.time_to_end(floor, elev, elev_pos)
 
 
 class Elev_queue:
@@ -29,13 +29,14 @@ class Elev_queue:
 class Our_algo:
 
     def __init__(self, building: Building):
-        self.timer = Timer(10)
+        self.timer = Timer()
         self.building = building
         self.elev_list = []  # list of queues for each elevator
         for i in range(building.number_of_elevators()):
             self.elev_list.append(Elev_queue())
 
     def allocate_elev(self, call: Call):
+        self.update()
         allo_elev = -1
         best_time = 9223372036854775807
         if (call.src < call.dest):
@@ -62,13 +63,35 @@ class Our_algo:
                     best_time = curr_time
                     allo_elev = i
 
+        if (allo_elev == -1):
+            pass #allocate to the fastest elevator
+
+        self.elev_list[allo_elev].queue.append(Q_Node(call.src, self.building.elevators[allo_elev],
+                                                      self.elev_list[allo_elev].elev_pos))
+        self.elev_list[allo_elev].queue.append(Q_Node(call.dest, self.building.elevators[allo_elev],
+                                                      self.elev_list[allo_elev].elev_pos))
         call.elev_allocate = allo_elev
+        self.update()
 
     def update(self):
+        self.update_queue()
+        self.update_state()
+        self.update_pos()
+
+    def update_queue(self):
+        for i in self.elev_list:
+            for q_node in i.queue:
+                if (q_node.arrival_time <= self.timer.get_time()):
+                    i.queue.remove(q_node)
+
+    def update_pos(self):
+
         pass
 
-    @staticmethod
-    def time_to_end(floor: int, elev: Elevator, elev_pos: int):
+    def update_state(self):
+        pass
+
+    def time_to_end(self, floor: int, elev: Elevator, elev_pos: int):
         floors = abs(elev_pos - floor)
         time = elev.close_time + elev.start_time + elev.stop_time + elev.open_time
         time += floors / elev.speed

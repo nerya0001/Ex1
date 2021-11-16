@@ -26,8 +26,19 @@ class Elevator(object):
             new_list.append(curr_elev)
         return new_list
 
+    def __lt__(self, other):
+        return self.speed < other.speed
+
+    def __repr__(self):
+        return self.__str__()
 
 
 if __name__ == '__main__':
     e = Elevator(2, 2.0, 0, 10, 0.2, 0.3, 0.1, 0.4)
-    print(e)
+    e1 = Elevator(8, 5.2, 0, 10, 0.2, 0.3, 0.1, 0.4)
+    e2 = Elevator(6, 8.5, 0, 10, 0.2, 0.3, 0.1, 0.4)
+    l = [e,e1,e2]
+    print(l)
+    print("\n")
+    l.sort()
+    print(l)

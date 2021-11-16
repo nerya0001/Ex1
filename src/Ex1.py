@@ -1,16 +1,16 @@
 import sys
-from classes.building_class import Building
-from classes.call_class import Call
-from our_algo import Our_algo
+import classes.building_class
+import classes.call_class
+import algo_class
 
 
 if __name__ == '__main__':
-    buliding = Building.init_from_file(sys.argv[1])
-    calls = Call.init_from_file(sys.argv[2])
-    out_name = str(sys.argv[3])
-    algo = Our_algo(buliding)
-    algo.timer.start()
-    for i in calls:
-        algo.allocate_elev(i)
-
-    Call.write_to(calls, out_name)
+    # buliding = Building.init_from_file(sys.argv[1])
+    # calls = Call.init_from_file(sys.argv[2])
+    # out_name = str(sys.argv[3])
+    building = classes.building_class.Building()
+    building.init_from_file("../input_data/json_buildings/b4.json")
+    calls = classes.call_class.Call.init_from_file("../input_data/csv_calls/Calls_a.csv")
+    algo = algo_class.Algo(building, calls)
+    algo.foreign()
+    classes.call_class.Call.write_to(algo.return_calls, "out.csv")
