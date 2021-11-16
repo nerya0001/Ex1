@@ -26,7 +26,7 @@ class Call:
         call = []
         for i in calls:
             call.append(i.__dict__.values())
-        with open(f'../out/{file_name}', "w", newline="") as ans:
+        with open(f'../input_data/out/{file_name}', "w", newline="") as ans:
             writer = csv.writer(ans)
             writer.writerows(call)
 
@@ -39,7 +39,11 @@ class Call:
 
 if __name__ == '__main__':
     pass
-    # calls = Call.init_from_file("../../input_data/csv_calls/Calls_a.csv")
+    calls = Call.init_from_file("../../input_data/csv_calls/Calls_a.csv")
+    l = [calls[0],calls[2],calls[3]]
+    l1 = [calls[0],calls[2],calls[3]]
+    print(l.__contains__(l1[0]))
+    print(l.__contains__(calls[5]))
     # b = classes.building_class.Building()
     # b.init_from_file("../../input_data/json_buildings/b4.json")
     # b.elevators.sort()
