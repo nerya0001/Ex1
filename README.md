@@ -7,7 +7,7 @@ we define efficiency as reducing the time passed from the moment a call was rece
 
 ## Approach:
 An offline elevators allocation algorithm is an algorithm, design to allocate elevators to passengers when all the input is given in advance.  
-The fact that the input is already known, on one hand give the algorithm extra time to calculate the best allocation posible.
+The fact that the input is already known, on one hand give the algorithm extra time to calculate the best allocation posible.  
 But on the other hand introduce a complication to the problem of allocation - the need to simulate somehow the movment of the elevators, in order to calculate the location of each elevator in any given moment.  
 In this repository we will attempt to suggest an appoach for an offline algorithm without the need to simulate the movment of the elevators.
 
