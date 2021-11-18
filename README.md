@@ -26,7 +26,8 @@ Then if there are still a few calls that wasn't allocated, we allocate them sepp
 6. After doing so for all of the elevators, do so again until you can't.
 7. Allocate remainimg calls if there are any.
 
-
+## UML diagram:
+![](./diagram-15260068679332570047.jpeg)
 ## How to run:
 make sure the necessary files are in the same folder, the files are:
 1. All of the code files.
