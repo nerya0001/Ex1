@@ -14,7 +14,7 @@ For more information on this topic we recommend reading the following articles:
 * This one dive deep into the subject, it helped us specipicly on it's unique approach to offline algorithm (page 70) - https://1drv.ms/b/s!AuDWVVpV6-rC7na9FC_0fi-pJ1Ig?e=vevmW4  
 * This one gave us (on page 146) a point to think about with regard to online algorithm - tha algorithm has to work within a certain time limit -  https://repository.lboro.ac.uk/articles/thesis/An_intelligent_real-time_lift_scheduling_system/9539087/files/17168627.pdf  
 
-* In this one we were introduced to the idea of dynamic patition of elevator allocation system - http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.8791&rep=rep1&type=pdf  
+* In this one we were introduced to the idea of dynamic partition of elevator allocation system - http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.8791&rep=rep1&type=pdf  
 
 
 
