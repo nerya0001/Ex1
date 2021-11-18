@@ -59,12 +59,10 @@ class Algo:
                     if self.work_calls[curr_call].time > time_to_end:
                         break
                     # and self.work_calls[curr_call].src < self.work_calls[curr_call].dest
-                    if call_dir_up and call.dest > self.work_calls[curr_call].src > call.src and self.work_calls[
-                        curr_call].src < self.work_calls[curr_call].dest:
+                    if call_dir_up and call.dest > self.work_calls[curr_call].src > call.src:
                         call_list.append(self.work_calls[curr_call])
 
-                    elif (not call_dir_up) and call.dest < self.work_calls[curr_call].src < call.src and \
-                            self.work_calls[curr_call].src > self.work_calls[curr_call].dest:
+                    elif (not call_dir_up) and call.dest < self.work_calls[curr_call].src < call.src:
                         call_list.append(self.work_calls[curr_call])
 
                 elev_call_lists.append(call_list)
