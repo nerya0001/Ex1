@@ -1,0 +1,49 @@
+@startuml
+!theme reddress-darkblue
+'https://plantuml.com/class-diagram
+Algo <|-- Building
+Building <|-- Elevator
+Algo <|-- Call
+
+class Building {
+int min_floor
+int max_floor
+list elevators
+init_from_file()
+number_of_elevators()
+}
+
+class Call {
+string name
+float time
+int src
+int dest
+int state
+int elev_allocate
+init_from_file()
+write_to()
+}
+
+class Elevator {
+int id
+float speed
+int min_floor
+int max_floor
+float close_time
+float open_time
+float start_time
+float stop_time
+init_from_list()
+}
+
+class Algo {
+list return_calls
+list work_calls
+Building building
+list used_list
+time_to_end()
+final_overlap()
+overlap()
+}
+
+@enduml

@@ -1,10 +1,9 @@
-import unittest
-from classes import building_class
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+from unittest import TestCase
 
 
-if __name__ == '__main__':
-    unittest.main()
+class TestBuilding(TestCase):
+    def test_init_from_file(self):
+        self.fail()
+
+    def test_number_of_elevators(self):
+        self.fail()

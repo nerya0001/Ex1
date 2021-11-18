@@ -1,5 +1,5 @@
 from unittest import TestCase
 
 
-class TestElevator(TestCase):
+class TestAlgo(TestCase):
     pass
