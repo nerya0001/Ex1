@@ -21,8 +21,8 @@ For more information on this topic we recommend reading the following articles:
 ## Offline Algorithm:
 Because we do not simulate the elevators movment, most of the work our algorithm do involve mostly the information that is already in the calls file.
 Essentially for every elevator the algorithm attemt to create the longest list posible of a calls that will overlap with each other in term of times, floor range and direction of travel.  
-Once every elevator got their first list the calls on that list are allocated to the output and the algorithm perform the same steps repeatedly until it get "stuck" - meanning, it can no longer perform without exceeding a list boundaries.  
-Then if there are still a few calls that wasn't allocated, we allocate them sepparately.
+Once every elevator got their first list, the calls on that list are allocated to the output and the algorithm perform the same steps repeatedly until it get "stuck" - meanning, it can no longer perform without exceeding a list boundaries.  
+
 
 #### the algorithm in steps: 
 1. Loop on every elevator in the building, and for every elevator loop on every call in the call list, and for every call loop again on all the rest of the calls.
