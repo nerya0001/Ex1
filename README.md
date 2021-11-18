@@ -75,9 +75,9 @@ B5 | d | 70
 #### run the algorithm: 
 ------------------------
 make sure the necessary files are in the same folder, the files are:
-1. All of the code files.
-2. A JSON building file on the same level of the Ex1.py file.
-3. A CSV calls file on the same level of the Ex1.py file.
+1. The project folder (Ex1).
+2. A JSON building file on the same level of the Ex1.py file (inside the src folder).
+3. A CSV calls file on the same level of the Ex1.py file (inside the src folder).
 
 Next, open a terminal window in the src folder and run the following command:  
 
