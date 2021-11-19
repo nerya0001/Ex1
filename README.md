@@ -97,3 +97,8 @@ Next, open a terminal window in this folder and run the following command:
 ```
 java -jar Ex1_checker_V1.2_obf.jar <ID,ID> <building.json> <calls.csv> <output.log>
 ```
+
+## GUI simulation
+This is a URL for a youtube video of our gui simulation:
+https://www.youtube.com/watch?v=OIHssaIewas
+
