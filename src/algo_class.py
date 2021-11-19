@@ -32,8 +32,8 @@ class Algo:
                 self.overlap()
             except:
                 break
-        for i in self.return_calls:
-            print(i)
+        # for i in self.return_calls:
+        #     print(i)
 
     ''' this function is the main function of this algorithm.
         it does the following steps:
